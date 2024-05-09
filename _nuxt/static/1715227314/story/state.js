@@ -1,0 +1,1 @@
+window.__NUXT__=(function(a){return {staticAssetsBase:"\u002F_nuxt\u002Fstatic\u002F1715227314",layout:"default",error:a,serverRendered:true,routePath:"\u002Fstory",config:{name:"Cecelia Mary DiMola",dates:"October 26th 1953 - November 15th 2023",_app:{basePath:"\u002F",assetsPath:"\u002F_nuxt\u002F",cdnURL:a}}}}(null));

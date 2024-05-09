@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/carrot-cake", {data:[{}],fetch:{},mutations:void 0});
