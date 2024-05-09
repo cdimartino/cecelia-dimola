@@ -5,9 +5,11 @@
     </div>
     <div class="section tribute">
       <!-- CONTENT START -->
-      <h1 class="title">In Loving Memory</h1>
-      <img height="292" src="~/assets/frontimage.jpg" alt="In loving memory" />
-      <div class="subtitle"><div class="name">{{ $config.name }}</div>{{ $config.dates }}</div>
+      <div class="title">Celebrating the Life of</div>
+      <div class="title name">{{ $config.name }}</div>
+      <img height="600" src="~/assets/frontimage.jpg" alt="Photo of Cecelia Mary DiMola" />
+      <div class="title dates">{{ $config.dates }}</div>
+    </div>
       <!-- CONTENT END -->
     </div>
   </div>

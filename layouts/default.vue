@@ -5,14 +5,11 @@
 </template>
 
 <style lang="scss">
-$highlight: #f41b8e;
-$highlightmuted: #f41b8ed9;
-$background: #2b3143;
+$highlight: #dc8547;
+$highlightmuted: #af131316;
+$background: #dc8547;
 
 html {
-  font-family: 'Lato', sans-serif;
-  font-size: 16px;
-  word-spacing: 1px;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   -moz-osx-font-smoothing: grayscale;
@@ -28,57 +25,66 @@ html {
 }
 
 .fa-ulist {
-    margin: 10px 0px!important;
-    list-style-type: none;
-    position: relative;
+  margin: 10px 0px !important;
+  list-style-type: none;
+  position: relative;
 }
+
 .fa-icon::before {
-    display: inline-block;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
 }
 
 .fa-list::before {
-    font: var(--fa-font-solid);
-    content: "\f105";
-    color: $highlight;
-    margin-right: 10px;
-    font-size: 12px;
-    position: absolute;
-    top: 0%;
-    left: 5px;
-    height: 100%;
-    display: flex;
-    align-items: center;
+  font: var(--fa-font-solid);
+  content: "\f105";
+  color: $highlight;
+  margin-right: 10px;
+  font-size: 12px;
+  position: absolute;
+  top: 0%;
+  left: 5px;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .fa-list {
-    margin: 0!important;
-    padding: 6px 0;
-    padding-left: 23px;
-    min-height: 28px;
-    position: relative;
+  margin: 0 !important;
+  padding: 6px 0;
+  padding-left: 23px;
+  min-height: 28px;
+  position: relative;
 }
 
-
 .container {
+  font-family: "Tillana", cursive;
+  font-size: medium;
+  letter-spacing: 1px;
+  // word-spacing: 1px;
   margin: 0 auto;
   min-height: 100vh;
-  display: flex;
+  display: grid;
+  grid:
+    "section links" 1fr / auto 1fr;
   justify-content: center;
   align-items: center;
   text-align: center;
+
   @media screen and (max-width: 800px) {
     flex-direction: column;
     justify-content: flex-start;
   }
 }
+
 .icon {
   margin-right: 10px;
   font-size: 22px;
-  height:28px;
+  height: 28px;
   width: 27.5px;
 }
+
 .section {
   flex: 0 0 50%;
   min-height: 100vh;
@@ -87,20 +93,23 @@ html {
   justify-content: center;
   align-items: center;
   text-align: center;
+
   @media screen and (max-width: 800px) {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     min-height: auto;
-    height: 100%!important;
-    padding-bottom: 90px!important;
+    height: 100% !important;
+    padding-bottom: 90px !important;
   }
+
   &.links {
     background-image: url('~assets/corner.svg');
     background-position: bottom 20px left 20px;
     background-repeat: no-repeat;
     background-size: 200px;
+
     @media screen and (max-width: 800px) {
       padding: 0;
       background-position: bottom 2px left 2px;
@@ -110,22 +119,26 @@ html {
       bottom: 0;
       left: 0;
       width: 100%;
-      height: 80px!important;
+      height: 80px !important;
       background: #1e2333d9;
-      padding-bottom: 0px!important;
+      padding-bottom: 0px !important;
       z-index: 2;
       backdrop-filter: blur(5px);
+
       ul {
         display: flex;
         justify-content: space-around;
         width: 100%;
         height: 100%;
+
         li {
           height: 100%;
           width: 20%;
+
           .icon {
             margin: 0;
           }
+
           a {
             height: 100%;
             padding: 0;
@@ -133,13 +146,15 @@ html {
             justify-content: center;
             align-items: center;
             color: #fffc;
-            font-size: 12px;
+
             &.nuxt-link-exact-active {
               color: #fff;
+
               .icon {
                 color: lighten($highlight, 5%);
               }
             }
+
             .menu span {
               display: none;
             }
@@ -147,6 +162,7 @@ html {
         }
       }
     }
+
     ul {
       padding: 0;
     }
@@ -157,9 +173,11 @@ html {
     justify-content: space-evenly;
     overflow: auto;
     height: 100vh;
+
     @media (max-height: 600px) {
       justify-content: normal;
     }
+
     img {
       //-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
       //filter: grayscale(100%);
@@ -168,8 +186,10 @@ html {
       box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.6);
     }
   }
+
   &.details {
     background: $background;
+    font-family: "Pangolin", cursive;
     color: white;
     align-items: flex-start;
     text-align: left;
@@ -178,42 +198,73 @@ html {
     overflow: auto;
     height: 100vh;
 
+    .title {
+      font-family: "Zeyada", cursive;
+      font-weight: 900;
+      font-size: 3em;
+    }
+
+    a {
+      color: white;
+      text-decoration: none;
+      font-weight: bolder;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
     p {
       margin: 10px 0;
       font-weight: 300;
+
       &.highlight {
         background: $highlightmuted;
         padding: 20px;
         font-weight: 400;
       }
     }
+
     .fa-li {
       color: $highlight;
     }
+
     ul {
       font-weight: 300;
       margin: 0 0 0 25px;
       padding: 0;
+
       li {
         margin: 10px 0;
       }
     }
+
     .title {
       margin: 0px 0 25px;
     }
+
     h2 {
       margin: 40px 0 5px;
       align-items: center;
       display: flex;
-      span, em {
+
+      span,
+      em {
         background: $highlightmuted;
         padding: 3px 7px;
-        font-size: 16px;
+        font-size: large;
+        font-weight: 800;
         margin-left: 15px;
         border-radius: 4px;
       }
     }
+
+    .story {
+      font-family: "Pangolin", cursive;
+      width: 65%
+    }
   }
+
   .button {
     padding: 15px 30px;
     border-radius: 4px;
@@ -222,29 +273,32 @@ html {
     text-decoration: none;
     color: #fff;
     margin: 10px 0;
-    box-shadow: 0 0 5px 2px rgba(0,0,0,0.3);
-    border-top: 1px solid rgba(255,255,255,0.2);
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
     display: inline-block;
   }
 }
+
 ul {
   list-style: none;
   font-weight: 700;
   text-align: left;
   font-size: 16px;
-  li {
-  }
+
   a {
+    font-weight: bold;
     color: $highlight;
     text-decoration: none;
     padding: 10px 0;
     display: flex;
     align-items: center;
+
     &.nuxt-link-exact-active {
-      color: #111;
+      color: #af131380;
     }
   }
 }
+
 .highlight {
   background: $highlight;
   padding: 3px 7px;
@@ -255,6 +309,7 @@ ul {
 }
 
 .menu {
+
   //display: flex;
   //flex-direction: column;
   small {
@@ -262,23 +317,25 @@ ul {
     font-weight: 400;
   }
 }
-.name {
-  font-size: 40px;
-  color: #fff;
-  font-weight: 300;
-}
+
 .title {
-  font-family: 'Pinyon Script', cursive;
+  font-weight: 400;
+  // font-style: normal;
   display: block;
-  font-weight: 300;
-  font-size: 50px;
-  color: #35495e;
-  letter-spacing: 1px;
-  margin: 40px 0;
-  color: #fff;
+  font-size: xx-large;
+  color: #fdc270;
+
   @media screen and (max-width: 800px) {
-    font-size: 40px;
+    font-size: 4em;
     margin: 30px 0;
+  }
+
+  &.name {
+    font-size: 4em;
+  }
+
+  &.dates {
+    font-size: x-large;
   }
 }
 
@@ -287,37 +344,55 @@ ul {
   font-size: 14px;
   color: #adb4c7;
   margin: 40px 0;
+
   @media screen and (max-width: 800px) {
     margin: 25px 0;
   }
 }
 
 .svg-inline--fa {
-    display: inline-block;
-    font-size: inherit;
-    height: 1em;
-    overflow: visible;
-    vertical-align: -.125em;
+  display: inline-block;
+  font-size: inherit;
+  height: 1em;
+  overflow: visible;
+  vertical-align: -.125em;
 }
+
 .fa-fw {
-    text-align: center;
+  text-align: center;
 }
+
 .fa-ul {
-    list-style-type: none;
-    position: relative;
+  list-style-type: none;
+  position: relative;
 }
+
 .fa-li {
-    left: -2em;
-    position: absolute;
-    text-align: center;
-    width: 2em;
-    line-height: inherit;
+  left: -2em;
+  position: absolute;
+  text-align: center;
+  width: 2em;
+  line-height: inherit;
 }
+
 .svg-inline--fa.fa-w-8 {
-    width: .5em;
+  width: .5em;
 }
 
 .svg-inline--fa.fa-fw {
-    width: 1.25em;
+  width: 1.25em;
+}
+
+.zeyada-regular {
+  font-family: "Zeyada", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+a.standout {
+  font-size: xx-large;
+  font-weight: 900 !important;
+  color: white;
+  text-decoration: none;
 }
 </style>

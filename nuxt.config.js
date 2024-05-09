@@ -1,7 +1,7 @@
 import { defineNuxtConfig } from '@nuxt/bridge'
 
-const name = 'Janet Doe'
-const dates = 'July 29th 1958 - Jan 4th 2021'
+const name = 'Cecelia Mary DiMola'
+const dates = 'October 26th 1953 - November 15th 2023'
 
 export default defineNuxtConfig ({
   bridge: false,
@@ -28,7 +28,11 @@ export default defineNuxtConfig ({
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,700&family=Pinyon+Script&display=swap' }
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,700&family=Pinyon+Script&display=swap' },
+      { rel: 'preconnect', href: "https://fonts.googleapis.com" },
+      { rel: 'stylesheet', href: "https://fonts.googleapis.com/css2?family=Zeyada&display=swap" },
+      { rel: 'stylesheet', href: "https://fonts.googleapis.com/css2?family=Pangolin&display=swap" },
+      { rel: 'stylesheet', href: "https://fonts.googleapis.com/css2?family=Tillana&display=swap" }
     ]
   },
 
